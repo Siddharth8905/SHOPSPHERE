@@ -1,0 +1,106 @@
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: url('/Volumes/C DRIVE/REACT/PROJECT/e-commerce/e-commerce/public/bg.webp');
+}
+
+header{
+    display: flex;
+    height: 10vh;
+    background-color: black;
+    color: whitesmoke;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+section ul li{
+    height: 4rem;
+    padding: 0.5rem;
+    background-color: #2c2c2c;
+    color: whitesmoke;
+    font-size: xx-large;
+    border-radius: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+li:hover,ul img:hover {
+    background-color: #cf3c3c;
+  }
+
+section ul img{
+    height: 50px;
+    width: 50px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 100px; 
+    padding: 10px;
+    height: 400px;
+    transition: transform 0.3s ease-in-out;
+    
+    
+  }
+.image-container img:hover {
+    transform: scale(1.1);
+  }
+.image-item {
+    text-align: center;
+    border-radius: 10%;
+    
+    width: 300px; 
+    height: 300px;
+    
+  
+  }
+.image-item img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 10px;
+  
+  }
+  
+  
+.image-name {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    
+  }
+p{
+    margin-left: 100px;
+}
+tr{
+  text-align: center;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.beautycard{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  
+}
+.beautycard img{
+  object-fit: contain;
+  border-radius: 10%;
+} 

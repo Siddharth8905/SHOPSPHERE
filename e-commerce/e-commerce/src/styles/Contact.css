@@ -1,0 +1,108 @@
+
+main{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: url('/Volumes/C DRIVE/REACT/PROJECT/e-commerce/e-commerce/public/bg.webp');
+}
+
+header{
+  display: flex;
+  height: 10vh;
+  background-color: black;
+  color: whitesmoke;
+  font-size: x-large;
+  justify-content: center;
+  align-items: center;
+  
+}
+  .right {
+    float: left;
+  }
+  
+  .right a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .right a:hover {
+    background-color: #0b0101;
+  }
+
+
+.contain {
+    min-height: 60vh;
+    min-width: 70vh;
+    margin-left: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+  } 
+  .form-container {
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    background-color: #348190;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+  .label {
+    font-weight: bold;
+    color: black;
+  } 
+  .input,
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  } 
+  .textarea {
+    resize: none;
+  }
+ 
+  .btn{
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    left:20%;
+    right:20%;
+    bottom:5%;
+    top:80%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position:relative;
+
+  } 
+  .remove{
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    bottom: 5%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
