@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Jacket() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const jacket = { 
@@ -43,7 +46,7 @@ function Jacket() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(jacket)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(jacket); cartmsg()}}>Add to Cart</button>     
             </section>
         </main>
   );

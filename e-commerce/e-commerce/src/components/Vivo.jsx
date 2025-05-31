@@ -5,6 +5,9 @@ import React, { useContext } from 'react';
 
 
 function Vivo() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const vivo = { 
@@ -47,7 +50,7 @@ function Vivo() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(vivo)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(vivo); cartmsg()}} >Add to Cart</button>     
                     
             </section>
         </main>

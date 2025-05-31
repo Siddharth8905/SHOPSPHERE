@@ -13,7 +13,7 @@ function Appliances() {
                    <li><Link to ="/Contact">Contact</Link></li>
                     <li><nav><Link to ="/Loggedinpage">Home</Link></nav></li>
                     <li><nav><Link to ="/Homepage">Logout</Link></nav></li>
-                    <img src="cart.png"/>
+                    <Link to="/cart"><img src="cart.png" alt="Cart Icon" /> </Link> 
                 </ul>
                 <br>
                 </br>

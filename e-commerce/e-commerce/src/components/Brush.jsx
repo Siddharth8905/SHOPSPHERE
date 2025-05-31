@@ -5,6 +5,9 @@ import React, { useContext } from 'react';
 
 
 function Brush() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
     const brush={ 
         id:9, 
@@ -44,7 +47,7 @@ function Brush() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(brush)}>Add to Cart</button>       
+                <button type="button" className="cart-btn" onClick={() => {addToCart(brush); cartmsg()}} >Add to Cart</button>       
             </section>
         </main>
   );

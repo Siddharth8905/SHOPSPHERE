@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Sunscreen() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
     const sunscreen={ 
         id:12, 
@@ -42,7 +45,7 @@ function Sunscreen() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(sunscreen)}>Add to Cart</button>       
+                <button type="button" className="cart-btn" onClick={() => {addToCart(sunscreen); cartmsg()}} >Add to Cart</button>       
   
             </section>
         </main>

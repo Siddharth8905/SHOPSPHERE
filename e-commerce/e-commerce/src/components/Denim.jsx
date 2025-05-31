@@ -5,6 +5,9 @@ import React, { useContext } from 'react';
 
 
 function Denim() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
     const denim={ id:6, img:"./fashion/denim.jpg" ,name:"Men Denim Full Sleeves Regular Fit Casual Shirt",price:1499
         
@@ -42,7 +45,7 @@ function Denim() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(denim)}>Add to Cart</button>    
+                <button type="button" className="cart-btn" onClick={() => {addToCart(denim); cartmsg()}} >Add to Cart</button>    
             </section>
         </main>
   );

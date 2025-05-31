@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function IronBox() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const iron = { 
@@ -43,7 +46,7 @@ function IronBox() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(iron)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(iron); cartmsg()}} >Add to Cart</button>     
             </section>
         </main>
   );

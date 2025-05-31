@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Ac() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
      const { addToCart } = useContext(CartContext); 
      
      const ac={ 
@@ -44,7 +47,7 @@ function Ac() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(ac)}>Add to Cart</button>    
+                <button type="button" className="cart-btn" onClick={() => {addToCart(ac); cartmsg()}}>Add to Cart</button>    
             </section>
         </main>
   );

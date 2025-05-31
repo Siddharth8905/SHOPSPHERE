@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Facewash() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
      const { addToCart } = useContext(CartContext);
 
     const facewash={ id:11, 
@@ -45,7 +48,7 @@ function Facewash() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(facewash)}>Add to Cart</button>       
+                <button type="button" className="cart-btn" onClick={() => {addToCart(facewash); cartmsg()}}  >Add to Cart</button>       
     
             </section>
         </main>

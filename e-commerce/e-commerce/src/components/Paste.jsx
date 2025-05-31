@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Paste() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
      const { addToCart } = useContext(CartContext);
     
     const paste={ id:10, img:"./beauty/paste.jpg" ,name:"Colgate Visible White Purple Toothpaste For Teeth Whitening",price:172 }
@@ -41,7 +44,7 @@ function Paste() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(paste)}>Add to Cart</button>       
+                <button type="button" className="cart-btn" onClick={() => {addToCart(paste); cartmsg()}}  >Add to Cart</button>       
     
             </section>
         </main>

@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Shampoo() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const shampoo = { 
@@ -42,7 +45,7 @@ function Shampoo() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(shampoo)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(shampoo); cartmsg()}} >Add to Cart</button>     
             </section>
         </main>
   );

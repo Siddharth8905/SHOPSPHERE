@@ -4,13 +4,16 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Mac() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const mac = { 
         id:23, 
         img:"./newreleases/laptop.jpg" , 
         name:"Apple 2024 MacBook Air (13-inch, Apple M3 chip with 8‑core CPU and 8‑core GPU, 16GB Unified Memory, 256GB) - Space Gray",
-        price:1059990
+        price:105990
     }
   return (
     
@@ -43,7 +46,7 @@ function Mac() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(mac)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(mac); cartmsg()}} >Add to Cart</button>     
             </section>
         </main>
   );

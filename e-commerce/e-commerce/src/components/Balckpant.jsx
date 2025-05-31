@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Blackpant() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
     
     const pant={ 
@@ -46,7 +49,7 @@ function Blackpant() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(pant)}>Add to Cart</button>      
+                <button type="button" className="cart-btn" onClick={() => {addToCart(pant); cartmsg()}} >Add to Cart</button>      
             </section>
         </main>
   );

@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import '../styles/Description.css';
 
 function Tv() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext); 
 
     const tv = {
@@ -43,7 +46,7 @@ function Tv() {
                         <p>* Display: Dynamic Crystal Color, HDR 10+, 4K Upscaling, UHD Dimming</p>
                     </div>
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(tv)}>Add to Cart</button>
+                <button type="button" className="cart-btn" onClick={() => {addToCart(tv); cartmsg()}}>Add to Cart</button>
             </section>
         </main>
     );

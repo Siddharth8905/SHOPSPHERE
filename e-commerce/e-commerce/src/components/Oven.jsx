@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Oven() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const oven = { 
@@ -44,7 +47,7 @@ function Oven() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(oven)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(oven); cartmsg()}}  >Add to Cart</button>     
             </section>
         </main>
   );

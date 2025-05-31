@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext';
 import React, { useContext } from 'react';
 
 function Facegel() {
+    const cartmsg=()=>{
+        alert("Item added")
+     }
     const { addToCart } = useContext(CartContext);
 
     const facegel = { 
@@ -44,7 +47,7 @@ function Facegel() {
                                 
                         </div>                  
                 </div>
-                <button type="button" className="cart-btn" onClick={() => addToCart(facegel)}>Add to Cart</button>     
+                <button type="button" className="cart-btn" onClick={() => {addToCart(facegel); cartmsg()}}  >Add to Cart</button>     
             </section>
         </main>
   );
