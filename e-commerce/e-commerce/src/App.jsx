@@ -41,6 +41,7 @@ import Jacket from './components/Jacket';
 import Shampoo from './components/Shampoo';
 import Mac from './components/Mac';
 import IronBox from './components/Ironbox';
+import SignUp from './components/SignUp';
 function App() {
     return (
         <>
@@ -89,6 +90,7 @@ function App() {
                     <Route path="/Shampoo" element={<Shampoo />} />
                     <Route path="/Mac" element={<Mac />} />
                     <Route path="/Ironbox" element={<IronBox />} />
+                    <Route path="/SignUp" element={<SignUp />} />
 
 
                 </Routes>

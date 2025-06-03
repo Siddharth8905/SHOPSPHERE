@@ -50,3 +50,10 @@ header{
 .login-btn:hover {
     background: linear-gradient(90deg, #3e91c1, #0069cc);
   }
+.anchor{
+    font-size: x-large;
+    color: black;
+}
+.anchor:hover{
+    text-decoration: underline;
+}

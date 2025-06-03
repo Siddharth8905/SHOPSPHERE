@@ -3,9 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css';
 import axios from 'axios';
 
-const Login = () => {
+const SignUp = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -15,15 +16,31 @@ const Login = () => {
         // Reset error message
         setError('');
 
-        // Validate username and password
+        // Basic validation
+        if (username.length < 3) {
+            setError('Username must be at least 3 characters long');
+            return;
+        }
+
+        // if (password.length < 6) {
+        //     setError('Password must be at least 6 characters long');
+        //     return;
+        // }
+
+        if (password !== confirmPassword) {
+            setError('Passwords do not match');
+            return;
+        }
+
         
-        axios
-      .post('http://localhost:5000/Login', { username, PassWord:password })
+    
+    axios
+      .post('http://localhost:5000/SignUp', { username, PassWord:password })
       .then((response) => {
         if (response.data.success) {
           console.log('Login successful!');
           localStorage.setItem('username', response.data.Name);
-          navigate('/Loggedinpage');
+          navigate('/Login');
         } else {
           setError(response.data.message || 'Login failed. Please try again.');
         }
@@ -32,10 +49,13 @@ const Login = () => {
         console.error('Error during login:', error);
         setError('Error during login. Please try again.');
       });
+  
+        // For now, navigate to login page on successful validation
+        
     };
 
-    const handleSignUp = () => {
-        navigate('/Signup');
+    const handleLoginRedirect = () => {
+        navigate('/login');
     };
 
     return (
@@ -70,6 +90,18 @@ const Login = () => {
                                         />
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td><label htmlFor="confirmPassword">Confirm Password :</label></td>
+                                    <td>
+                                        <input 
+                                            type="password" 
+                                            id="confirmPassword" 
+                                            value={confirmPassword} 
+                                            onChange={(e) => setConfirmPassword(e.target.value)} 
+                                            required 
+                                        />
+                                    </td>
+                                </tr>
                                 {/* Error message display */}
                                 {error && (
                                     <tr>
@@ -80,13 +112,12 @@ const Login = () => {
                                 )}
                                 <tr>
                                     <td colSpan="2" style={{ textAlign: "center" }}>
-                                        <button type="submit" className="login-btn">Login</button>
+                                        <button type="submit" className="login-btn">Sign Up</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colSpan="2" style={{ textAlign: "center" }}>
-                                        <span>Don't have an account? </span>
-                                        <a onClick={handleSignUp} className='anchor' >Sign Up</a>
+                                        <button type="button" className="login-btn" onClick={handleLoginRedirect}>Back to Login</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -98,4 +129,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;
