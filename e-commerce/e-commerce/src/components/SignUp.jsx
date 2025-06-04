@@ -35,7 +35,7 @@ const SignUp = () => {
         
     
     axios
-      .post('http://localhost:5000/SignUp', { username, PassWord:password })
+        .post('http://localhost:5000/Signup', { username, PassWord:password })
       .then((response) => {
         if (response.data.success) {
           console.log('Login successful!');
